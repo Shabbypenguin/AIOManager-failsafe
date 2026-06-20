@@ -125,11 +125,6 @@ POLL_INTERVAL_SECONDS=60
 # HTTP request timeout (seconds)
 REQUEST_TIMEOUT_SECONDS=10
 
-# ---------------------------------------------------------------------------
-# TorBox status page (optional — only used if provider is torbox)
-# Kept for reference but the monitor now checks the API directly, not the status page
-# ---------------------------------------------------------------------------
-# TORBOX_STATUS_URL=https://status.torbox.app/index.json
 ```
 
 ---

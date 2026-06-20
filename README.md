@@ -7,8 +7,11 @@ AIOStreams configuration that is setup to use a usenet block account that only s
 
 # Credits
 [Viren](https://github.com/Viren070) - For AIOStreams and all their stellar work in the stremio community
+
 [Sonic](https://github.com/Sonicx161) - For AIOManager which makes managing addons a ton easier, this tool wouldnt be possible without the hydra api inside AIOManager.
+
 The stremio team - Without them we wouldnt have a program to try and tinker/optimize more than we watch
+
 Countless others who help all the time in viren's discord.
 
 ## How it works

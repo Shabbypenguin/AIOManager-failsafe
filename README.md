@@ -1,9 +1,8 @@
 # Debrid Monitor
 
-Polls your debrid provider's API and automatically switches addon URLs across all configured AIOManager accounts when the service goes down, then restores them when it recovers. 
-Why would you want this? Maybe you have unlimited on a debrid provider but want a usenet backup, however paying monthly for usenet is an added cost. With this you could have an 
-AIOStreams configuration that is setup to use a usenet block account that only switches over to that configuration when torbox/reldebrid is down. Allowing your block to not be used in normal streaming, but allow for redundancy.
+Polls your debrid provider's API and automatically switches addon URLs across all configured AIOManager accounts when the service goes down, then restores them when it recovers.
 
+Why would you want this? Maybe you have unlimited on a debrid provider but want a usenet backup, however paying monthly for usenet is an added cost. With this you could have an AIOStreams configuration set up to use a usenet block account that only switches over when your debrid is down, allowing your block to not be used during normal streaming while still providing redundancy when you need it.
 
 # Credits
 [Viren](https://github.com/Viren070) - For AIOStreams and all their stellar work in the stremio community
@@ -28,10 +27,16 @@ State is persisted to `.state.json` so restarts don't re-trigger unnecessary swi
 
 ## Supported providers
 
-| Provider | `DEBRID_PROVIDER` value |
-|---|---|
-| TorBox | `torbox` |
-| Real-Debrid | `realdebrid` |
+| Provider | `DEBRID_PROVIDER` value | Notes |
+|---|---|---|
+| TorBox | `torbox` | |
+| Real-Debrid | `realdebrid` | |
+| Premiumize | `premiumize` | |
+| AllDebrid | `alldebrid` | |
+| Debrid-Link | `debridlink` | |
+| EasyDebrid | `easydebrid` | |
+| Offcloud | `offcloud` | No explicit premium flag — 200 with no error = active |
+| Put.io | `putio` | 401 = expired/invalid token, otherwise up |
 
 ## Setup
 
@@ -64,7 +69,7 @@ All configuration can be provided via environment variables. `config.json` is op
 # Debrid Provider
 # ---------------------------------------------------------------------------
 
-# Which debrid provider to monitor: torbox | realdebrid
+# Which debrid provider to monitor: torbox | realdebrid | premiumize | alldebrid | debridlink | easydebrid | offcloud | putio
 DEBRID_PROVIDER=torbox
 
 # Your debrid provider API key
@@ -99,7 +104,7 @@ FALLBACK_ADDON_URL=https://your-fallback-addon.com/stremio/uuid-here/token-here/
 # name uppercased with spaces and hyphens replaced by underscores.
 # ACCOUNT_<NAME>_RESOLUTION is optional — omit to use the default DEBRID_ADDON_URL.
 # Resolution options: 4k | hd
-# API key is found in the account on AIOmanager, under connections.
+# API key is found in the account on AIOManager, under connections.
 
 ACCOUNT_ALICE_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ACCOUNT_ALICE_RESOLUTION=4k
@@ -124,7 +129,6 @@ POLL_INTERVAL_SECONDS=60
 
 # HTTP request timeout (seconds)
 REQUEST_TIMEOUT_SECONDS=10
-
 ```
 
 ---

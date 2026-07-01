@@ -1,8 +1,15 @@
-# Debrid Monitor
+# Depreciated. AIOmanager now has built in url checks so y ou can check service api's and route your addons accordingly.
 
-Polls your debrid provider's API and automatically switches addon URLs across all configured AIOManager accounts when the service goes down, then restores them when it recovers.
 
-Why would you want this? Maybe you have unlimited on a debrid provider but want a usenet backup, however paying monthly for usenet is an added cost. With this you could have an AIOStreams configuration set up to use a usenet block account that only switches over when your debrid is down, allowing your block to not be used during normal streaming while still providing redundancy when you need it.
+
+
+
+
+~~# Debrid Monitor~~
+
+~~Polls your debrid provider's API and automatically switches addon URLs across all configured AIOManager accounts when the service goes down, then restores them when it recovers.~~
+
+~~Why would you want this? Maybe you have unlimited on a debrid provider but want a usenet backup, however paying monthly for usenet is an added cost. With this you could have an AIOStreams configuration set up to use a usenet block account that only switches over when your debrid is down, allowing your block to not be used during normal streaming while still providing redundancy when you need it.~~
 
 # Credits
 [Viren](https://github.com/Viren070) - For AIOStreams and all their stellar work in the stremio community

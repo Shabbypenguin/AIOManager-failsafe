@@ -1,4 +1,4 @@
-# Depreciated. AIOmanager now has built in url checks so y ou can check service api's and route your addons accordingly.
+# Depreciated. AIOmanager now has built in url checks so you can check service api's and route your addons accordingly.
 
 
 
